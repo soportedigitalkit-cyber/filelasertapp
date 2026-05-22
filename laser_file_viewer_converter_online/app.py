@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import base64
 import hashlib
 import os
 from datetime import datetime
@@ -18,6 +19,8 @@ UPLOAD_DIR = DATA_DIR / "uploads"
 OUTPUT_DIR = DATA_DIR / "outputs"
 PREVIEW_DIR = DATA_DIR / "previews"
 HISTORY_CSV = DATA_DIR / "history.csv"
+ASSETS_DIR = ROOT / "assets"
+LOGO_PATH = ASSETS_DIR / "logo_biblioteca_laser.png"
 
 for folder in [UPLOAD_DIR, OUTPUT_DIR, PREVIEW_DIR]:
     folder.mkdir(parents=True, exist_ok=True)
@@ -87,6 +90,24 @@ def reset_results() -> None:
     st.session_state.conversion_results = {}
 
 
+def image_to_base64(path: Path) -> str:
+    return base64.b64encode(path.read_bytes()).decode("utf-8")
+
+
+def render_logo_header() -> None:
+    if not LOGO_PATH.exists():
+        return
+    logo_b64 = image_to_base64(LOGO_PATH)
+    st.markdown(
+        f"""
+<div class="lfc-logo-header">
+  <img src="data:image/png;base64,{logo_b64}" alt="Biblioteca Láser" />
+</div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 def render_css() -> None:
     st.markdown(
         """
@@ -95,6 +116,20 @@ def render_css() -> None:
 footer {visibility: hidden;}
 header {visibility: hidden;}
 .block-container {padding-top: 1.2rem; padding-bottom: 3rem; max-width: 1180px;}
+
+.lfc-logo-header {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin: 0 0 16px 0;
+}
+.lfc-logo-header img {
+  width: min(210px, 42vw);
+  height:auto;
+  border-radius: 999px;
+  box-shadow: 0 18px 44px rgba(46,36,28,.24);
+  border: 1px solid rgba(217,154,43,.28);
+}
 
 .lfc-hero {
   border: 1px solid rgba(146, 102, 37, .18);
@@ -188,6 +223,7 @@ header {visibility: hidden;}
 
 
 def login_screen() -> None:
+    render_logo_header()
     st.markdown(
         f"""
 <div class="lfc-hero">
@@ -397,6 +433,7 @@ def conversion_block(uploaded, index: int) -> None:
 
 
 def app_screen() -> None:
+    render_logo_header()
     st.markdown(
         f"""
 <div class="lfc-hero">

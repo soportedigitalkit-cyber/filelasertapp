@@ -84,3 +84,8 @@ LASER2026
 ## Recomendación
 
 Antes de cortar o grabar madera, revisar siempre escala, capas y líneas en el software de láser habitual.
+
+
+## Logo
+
+El logo principal está en `assets/logo_biblioteca_laser.png`. Para cambiarlo, reemplazá ese archivo manteniendo el mismo nombre.
