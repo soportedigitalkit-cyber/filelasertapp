@@ -203,7 +203,7 @@ def get_access_code() -> str:
     env_value = os.getenv("APP_ACCESS_CODE")
     if env_value:
         return env_value.strip()
-    return "LASER2026"
+    return "DISEÑOSLASER2026"
 
 
 def query_lang() -> str:
