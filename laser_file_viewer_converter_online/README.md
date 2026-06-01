@@ -1,15 +1,18 @@
-# Laser File Viewer & Converter — Online Bilingual Version
+# Laser File Viewer & Converter — Online Trilingual Version
 
 Mini app online para visualizar y convertir archivos simples de diseños láser en madera.
 
-This is a bilingual online tool for previewing and converting simple laser design files.
+This online tool lets users preview and convert simple laser design files.
 
-## Idiomas / Languages
+Questa mini app online permette di visualizzare e convertire file semplici per progetti di taglio laser su legno.
+
+## Idiomas / Languages / Lingue
 
 La app incluye selector de idioma:
 
-- Español
 - English
+- Español
+- Italiano
 
 Idioma por defecto:
 
@@ -22,9 +25,10 @@ También podés abrir la app directamente con parámetro de idioma:
 ```txt
 ?lang=en
 ?lang=es
+?lang=it
 ```
 
-## Formatos incluidos / Included formats
+## Formatos incluidos / Included formats / Formati inclusi
 
 Entrada / Input:
 
@@ -52,7 +56,9 @@ assets/logo_laser_design_library.png
 .streamlit/secrets.toml.example
 ```
 
-## Clave de acceso / Access code
+Nota: Italiano usa el mismo logo que Español: `assets/logo_biblioteca_laser.png`.
+
+## Clave de acceso / Access code / Codice di accesso
 
 Clave por defecto:
 
@@ -103,6 +109,12 @@ English:
 https://laserconverterviz.streamlit.app/?lang=en
 ```
 
+Italiano:
+
+```txt
+https://laserconverterviz.streamlit.app/?lang=it
+```
+
 ## Texto sugerido en español
 
 **BONUS: Laser File Viewer & Converter**
@@ -127,8 +139,22 @@ Access code:
 LASER2026
 ```
 
-## Recomendación / Recommendation
+## Testo suggerito in italiano
+
+**BONUS: Laser File Viewer & Converter**
+
+Usa questa mini app inclusa per caricare file DXF, SVG, PDF o PNG, visualizzarli prima di lavorare e scaricarli in formati utili per i tuoi progetti di taglio laser su legno.
+
+Codice di accesso:
+
+```txt
+LASER2026
+```
+
+## Recomendación / Recommendation / Consiglio
 
 Antes de cortar o grabar madera, revisar siempre escala, capas y líneas en el software de láser habitual.
 
 Before cutting or engraving wood, always check scale, layers, and lines in your usual laser software.
+
+Prima di tagliare o incidere il legno, controlla sempre scala, livelli e linee nel tuo software laser abituale.
