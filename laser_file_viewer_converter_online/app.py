@@ -24,6 +24,7 @@ LOGO_BY_LANG = {
     "es": ASSETS_DIR / "logo_biblioteca_laser.png",
     "en": ASSETS_DIR / "logo_laser_design_library.png",
     "it": ASSETS_DIR / "logo_biblioteca_laser.png",  # Italian uses the same logo as Spanish
+    "fr": ASSETS_DIR / "logo_bibliotheque_laser.png",
 }
 
 for folder in [UPLOAD_DIR, OUTPUT_DIR, PREVIEW_DIR]:
@@ -234,13 +235,74 @@ TEXTS: dict[str, dict[str, str]] = {'es': {'lang_label': '🌐 Idioma / Language
         'available_title': 'Formati disponibili',
         'available_text': 'Lo strumento accetta file <strong>DXF, SVG, PDF e PNG</strong>. Una volta caricato il file, '
                           'potrai scegliere il formato di uscita disponibile e scaricarlo.',
-        'footer': 'Prima di tagliare o incidere, controlla scala, livelli e linee nel tuo software laser abituale.'}}
+        'footer': 'Prima di tagliare o incidere, controlla scala, livelli e linee nel tuo software laser abituale.'},
+ 'fr': {'lang_label': '🌐 Langue / Language / Idioma',
+        'logo_alt': 'Bibliothèque Laser',
+        'login_kicker': 'Bonus inclus',
+        'app_kicker': 'Outil inclus',
+        'subtitle': 'Visualisez, convertissez et préparez vos fichiers pour la découpe laser sur bois.',
+        'pill_dxf': 'DXF',
+        'pill_svg': 'SVG',
+        'pill_pdf': 'PDF',
+        'pill_png': 'PNG',
+        'pill_viewer': 'Aperçu des fichiers',
+        'pill_converter': 'Convertisseur simple',
+        'pill_download': 'Téléchargement immédiat',
+        'access_title': 'Accès à l’outil',
+        'access_input': 'Entrez votre clé d’accès',
+        'access_placeholder': 'Clé d’accès',
+        'access_button': 'Entrer',
+        'access_error': 'La clé saisie n’est pas correcte.',
+        'what_title': 'Que pouvez-vous faire ?',
+        'what_text': 'Téléversez vos fichiers de design, prévisualisez-les avant de les utiliser et téléchargez-les dans un autre format compatible pour vos projets de découpe ou de gravure laser.',
+        'formats_included': 'Formats inclus :',
+        'file_ready': '✅ Fichier prêt à télécharger',
+        'generated_format': 'Format généré',
+        'download': '⬇️ Télécharger',
+        'file_error_title': '❌ Le fichier n’a pas pu être généré',
+        'file_error_text': 'Essayez de le convertir dans un autre format ou vérifiez que le fichier original s’ouvre correctement dans votre logiciel de design.',
+        'file': 'Fichier',
+        'convert_file': 'Convertir le fichier',
+        'current_format': 'Format actuel',
+        'size': 'Taille',
+        'unsupported': 'Ce format n’est pas encore disponible dans cet outil.',
+        'choose_output': 'Choisissez le format de sortie',
+        'recommended': 'Recommandé pour ce fichier',
+        'convert_to': 'Convertir en',
+        'status_preparing': 'Préparation du fichier...',
+        'progress_start': 'Démarrage',
+        'progress_received': 'Fichier reçu',
+        'status_received': 'Fichier reçu correctement.',
+        'progress_converting': 'Génération du nouveau format',
+        'status_generating': 'Génération de la version',
+        'progress_download': 'Préparation du téléchargement',
+        'progress_ready': 'Prêt',
+        'status_success': 'Fichier généré avec succès',
+        'progress_failed': 'Impossible de terminer',
+        'status_failed': 'La conversion n’a pas pu être terminée',
+        'preview': 'Aperçu',
+        'preview_full': 'Ouvrir l’aperçu agrandi',
+        'preview_error': 'L’aperçu automatique n’a pas pu être généré pour ce fichier.',
+        'step_1_title': '1. Téléversez',
+        'step_1_text': 'DXF, SVG, PDF ou PNG.',
+        'step_2_title': '2. Visualisez',
+        'step_2_text': 'Vérifiez le design avant de le convertir.',
+        'step_3_title': '3. Téléchargez',
+        'step_3_text': 'Obtenez le fichier dans un autre format.',
+        'uploader': 'Téléversez un ou plusieurs fichiers',
+        'uploader_help': 'Vous pouvez téléverser des designs en DXF, SVG, PDF ou PNG.',
+        'uploaded_count': 'Fichiers téléversés',
+        'clear': 'Effacer les résultats',
+        'available_title': 'Formats disponibles',
+        'available_text': 'L’outil accepte les fichiers <strong>DXF, SVG, PDF et PNG</strong>. Une fois le fichier téléversé, vous pourrez choisir le format de sortie disponible et le télécharger.',
+        'footer': 'Avant de découper ou de graver, vérifiez l’échelle, les calques et les lignes dans votre logiciel laser habituel.'}}
 
 RECOMMENDED_BY_INPUT = {'es': {'svg': 'SVG o DXF', 'dxf': 'SVG o PDF', 'pdf': 'PNG o SVG', 'png': 'PDF o SVG', 'default': 'SVG o PDF'},
  'en': {'svg': 'SVG or DXF', 'dxf': 'SVG or PDF', 'pdf': 'PNG or SVG', 'png': 'PDF or SVG', 'default': 'SVG or PDF'},
- 'it': {'svg': 'SVG o DXF', 'dxf': 'SVG o PDF', 'pdf': 'PNG o SVG', 'png': 'PDF o SVG', 'default': 'SVG o PDF'}}
+ 'it': {'svg': 'SVG o DXF', 'dxf': 'SVG o PDF', 'pdf': 'PNG o SVG', 'png': 'PDF o SVG', 'default': 'SVG o PDF'},
+ 'fr': {'svg': 'SVG ou DXF', 'dxf': 'SVG ou PDF', 'pdf': 'PNG ou SVG', 'png': 'PDF ou SVG', 'default': 'SVG ou PDF'}}
 
-LANG_LABELS = {'en': 'English', 'es': 'Español', 'it': 'Italiano'}
+LANG_LABELS = {'en': 'English', 'es': 'Español', 'it': 'Italiano', 'fr': 'Français'}
 
 
 def get_access_code() -> str:
@@ -284,8 +346,8 @@ def render_language_selector() -> None:
     with right:
         selected = st.selectbox(
             tx("lang_label"),
-            options=["en", "es", "it"],
-            index=["en", "es", "it"].index(lang),
+            options=["en", "es", "it", "fr"],
+            index=["en", "es", "it", "fr"].index(lang),
             format_func=lambda code: LANG_LABELS[code],
             key="language_picker",
             label_visibility="collapsed",

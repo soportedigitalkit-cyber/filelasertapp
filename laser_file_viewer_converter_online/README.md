@@ -113,6 +113,7 @@ Italiano:
 
 ```txt
 https://laserconverterviz.streamlit.app/?lang=it
+- Francés: https://laserconverterviz.streamlit.app/?lang=fr
 ```
 
 ## Texto sugerido en español
@@ -158,3 +159,13 @@ Antes de cortar o grabar madera, revisar siempre escala, capas y líneas en el s
 Before cutting or engraving wood, always check scale, layers, and lines in your usual laser software.
 
 Prima di tagliare o incidere il legno, controlla sempre scala, livelli e linee nel tuo software laser abituale.
+
+
+## Idiomas disponibles
+
+- English: `?lang=en`
+- Español: `?lang=es`
+- Italiano: `?lang=it`
+- Français: `?lang=fr`
+
+El idioma francés usa el logo `assets/logo_bibliotheque_laser.png`.
